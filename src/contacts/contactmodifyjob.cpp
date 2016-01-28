@@ -34,7 +34,7 @@
 
 using namespace KGAPI2;
 
-class ContactModifyJob::Private
+class Q_DECL_HIDDEN ContactModifyJob::Private
 {
   public:
     Private(ContactModifyJob *parent);
@@ -73,12 +73,14 @@ void ContactModifyJob::Private::processNextContact()
     rawData.append("</atom:entry>");
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
 
-    q->enqueueRequest(request, rawData, QLatin1String("application/atom+xml"));
+    q->enqueueRequest(request, rawData, QStringLiteral("application/atom+xml"));
 
     QNetworkRequest photoRequest;
     photoRequest.setUrl(ContactsService::photoUrl(q->account()->accountName(), contact->uid()));
@@ -90,9 +92,9 @@ void ContactModifyJob::Private::processNextContact()
         QBuffer buffer(&ba);
         image.save(&buffer, "JPG", 100);
 
-        q->enqueueRequest(photoRequest, ba, QLatin1String("modifyImage"));
+        q->enqueueRequest(photoRequest, ba, QStringLiteral("modifyImage"));
     } else {
-        q->enqueueRequest(photoRequest, QByteArray(), QLatin1String("deleteImage"));
+        q->enqueueRequest(photoRequest, QByteArray(), QStringLiteral("deleteImage"));
   }
 }
 

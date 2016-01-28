@@ -32,7 +32,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Drive;
 
-class RevisionModifyJob::Private
+class Q_DECL_HIDDEN RevisionModifyJob::Private
 {
   public:
     Private(RevisionModifyJob *parent);
@@ -64,7 +64,7 @@ void RevisionModifyJob::Private::processNext()
     request.setRawHeader("Authorization", "Bearer " + q->account()->accessToken().toLatin1());
 
     const QByteArray rawData = Revision::toJSON(revision);
-    q->enqueueRequest(request, rawData, QLatin1String("application/json"));
+    q->enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 RevisionModifyJob::RevisionModifyJob(const QString &fileId,

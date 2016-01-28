@@ -31,7 +31,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Drive;
 
-class FileCopyJob::Private
+class Q_DECL_HIDDEN FileCopyJob::Private
 {
   public:
     Private(FileCopyJob *parent);
@@ -57,7 +57,7 @@ void FileCopyJob::Private::processNext()
         return;
     }
 
-    const QString fileId = files.keys().first();
+    const QString fileId = files.cbegin().key();
     const FilePtr file = files.take(fileId);
 
     QUrl url = DriveService::copyFileUrl(fileId);
@@ -68,7 +68,7 @@ void FileCopyJob::Private::processNext()
 
     const QByteArray rawData = File::toJSON(file);
 
-    q->enqueueRequest(request, rawData, QLatin1String("application/json"));
+    q->enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 FileCopyJob::FileCopyJob(const QString &sourceFileId,

@@ -23,7 +23,7 @@
 
 using namespace KGAPI2::Blogger;
 
-class Blog::Private
+class Q_DECL_HIDDEN Blog::Private
 {
   public:
     Private();
@@ -155,7 +155,7 @@ BlogPtr Blog::fromJSON(const QByteArray &rawData)
 
     const QVariant json = document.toVariant();
     const QVariantMap map = json.toMap();
-    if (map[QLatin1String("kind")].toString() != QLatin1String("blogger#blog")) {
+    if (map[QStringLiteral("kind")].toString() != QLatin1String("blogger#blog")) {
         return BlogPtr();
     }
 
@@ -171,12 +171,13 @@ BlogsList Blog::fromJSONFeed(const QByteArray &rawData)
 
     const QVariant json = document.toVariant();
     const QVariantMap map = json.toMap();
-    if (map[QLatin1String("kind")].toString() != QLatin1String("blogger#blogList")) {
+    if (map[QStringLiteral("kind")].toString() != QLatin1String("blogger#blogList")) {
         return BlogsList();
     }
 
     BlogsList items;
     const QVariantList blogs = map[QStringLiteral("items")].toList();
+    items.reserve(blogs.size());
     Q_FOREACH (const QVariant &blog, blogs) {
         items << Blog::Private::fromJSON(blog);
     }

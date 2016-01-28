@@ -34,7 +34,7 @@
 
 using namespace KGAPI2;
 
-class EventCreateJob::Private
+class Q_DECL_HIDDEN EventCreateJob::Private
 {
   public:
     QueueHelper<EventPtr> events;
@@ -79,12 +79,14 @@ void EventCreateJob::start()
     const QByteArray rawData = CalendarService::eventToJSON(event);
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
 
-    enqueueRequest(request, rawData, QLatin1String("application/json"));
+    enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ObjectsList EventCreateJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray& rawData)

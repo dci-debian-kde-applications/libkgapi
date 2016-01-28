@@ -20,6 +20,7 @@
 
 #include "types.h"
 #include "object.h"
+#include "file.h"
 #include "kgapidrive_export.h"
 
 #include <QtCore/QString>
@@ -45,8 +46,6 @@ class KGAPIDRIVE_EXPORT ParentReference: public KGAPI2::Object
 {
 
   public:
-    class Private;
-
     explicit ParentReference(const QString &id);
     explicit ParentReference(const ParentReference &other);
     virtual ~ParentReference();
@@ -76,8 +75,11 @@ class KGAPIDRIVE_EXPORT ParentReference: public KGAPI2::Object
     static QByteArray toJSON(const ParentReferencePtr &reference);
 
   private:
+    class Private;
     Private *const d;
     friend class Private;
+    friend class File;
+    friend class File::Private;
 };
 
 } /* namespace Drive */

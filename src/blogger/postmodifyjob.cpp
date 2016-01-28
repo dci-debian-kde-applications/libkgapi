@@ -29,7 +29,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Blogger;
 
-class PostModifyJob::Private
+class Q_DECL_HIDDEN PostModifyJob::Private
 {
   public:
     Private(const PostPtr &post);
@@ -63,7 +63,7 @@ void PostModifyJob::start()
     request.setUrl(url);
 
     const QByteArray rawData = Post::toJSON(d->post);
-    enqueueRequest(request, rawData, QLatin1String("application/json"));
+    enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ObjectsList PostModifyJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray &rawData)

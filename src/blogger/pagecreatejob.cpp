@@ -29,7 +29,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Blogger;
 
-class PageCreateJob::Private
+class Q_DECL_HIDDEN PageCreateJob::Private
 {
   public:
     Private(const PagePtr &page);
@@ -64,7 +64,7 @@ void PageCreateJob::start()
 
     const QByteArray rawData = Page::toJSON(d->page);
 
-    enqueueRequest(request, rawData, QLatin1String("application/json"));
+    enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ObjectsList PageCreateJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray &rawData)

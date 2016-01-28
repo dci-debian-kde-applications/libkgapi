@@ -13,6 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: qtrich\n"
+"X-Qt-Contexts: true\n"
 
 #: src/blogger/blogfetchjob.cpp:102
 msgctxt "KGAPI2::Blogger::BlogFetchJob|"

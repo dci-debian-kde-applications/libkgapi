@@ -32,7 +32,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Drive;
 
-class ChildReferenceCreateJob::Private
+class Q_DECL_HIDDEN ChildReferenceCreateJob::Private
 {
   public:
     Private(ChildReferenceCreateJob *parent);
@@ -65,7 +65,7 @@ void ChildReferenceCreateJob::Private::processNext()
     request.setUrl(url);
 
     const QByteArray rawData = ChildReference::toJSON(reference);
-    q->enqueueRequest(request, rawData, QLatin1String("application/json"));
+    q->enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ChildReferenceCreateJob::ChildReferenceCreateJob(const QString &folderId,

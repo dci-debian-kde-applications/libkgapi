@@ -33,7 +33,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Drive;
 
-class AboutFetchJob::Private
+class Q_DECL_HIDDEN AboutFetchJob::Private
 {
   public:
     Private();
@@ -112,7 +112,7 @@ AboutPtr AboutFetchJob::aboutData() const
         return AboutPtr();
     }
 
-    return items().first().dynamicCast<About>();
+    return items().at(0).dynamicCast<About>();
 }
 
 void AboutFetchJob::start()
