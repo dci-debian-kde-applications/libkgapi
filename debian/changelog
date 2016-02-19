@@ -1,3 +1,9 @@
+libkgapi (5.1.0-1ubuntu1) UNRELEASED; urgency=medium
+
+  * Debian merge: No remaining changes. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 19 Feb 2016 12:08:03 -0800
+
 libkgapi (5.1.0-1) experimental; urgency=medium
 
   * New upstream release (5.1.0).
