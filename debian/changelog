@@ -1,6 +1,10 @@
 libkgapi (5.1.0-1ubuntu1) UNRELEASED; urgency=medium
 
+  [ Scarlett Clark ]
   * Debian merge: No remaining changes. 
+
+  [ Clive Johnston ]
+  * Refreshing symbols 
 
  -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 19 Feb 2016 12:08:03 -0800
 

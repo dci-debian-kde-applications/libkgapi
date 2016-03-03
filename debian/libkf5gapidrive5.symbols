@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.1.0 amd64
+# SymbolsHelper-Confirmed: 5.1.0+git20160302.1303+16.04 amd64 i386
 libKF5GAPIDrive.so.5 libkf5gapidrive5 #MINVER#
  _ZN6KGAPI212DriveService11copyFileUrlERK7QString@Base 4.80.0
  _ZN6KGAPI212DriveService11fetchAppUrlERK7QString@Base 4.80.0
@@ -48,6 +48,9 @@ libKF5GAPIDrive.so.5 libkf5gapidrive5 #MINVER#
  _ZN6KGAPI25Drive10PermissionD0Ev@Base 4.80.0
  _ZN6KGAPI25Drive10PermissionD1Ev@Base 4.80.0
  _ZN6KGAPI25Drive10PermissionD2Ev@Base 4.80.0
+ _ZN6KGAPI25Drive11AppFetchJob11qt_metacallEN11QMetaObject4CallEiPPv@Base 5.1.0+git20160302.1303+16.04
+ _ZN6KGAPI25Drive11AppFetchJob11qt_metacastEPKc@Base 5.1.0+git20160302.1303+16.04
+ _ZN6KGAPI25Drive11AppFetchJob16staticMetaObjectE@Base 5.1.0+git20160302.1303+16.04
  _ZN6KGAPI25Drive11AppFetchJob20handleReplyWithItemsEPK13QNetworkReplyRK10QByteArray@Base 4.80.0
  _ZN6KGAPI25Drive11AppFetchJob5startEv@Base 4.80.0
  _ZN6KGAPI25Drive11AppFetchJobC1ERK14QSharedPointerINS_7AccountEEP7QObject@Base 4.80.0
@@ -661,6 +664,7 @@ libKF5GAPIDrive.so.5 libkf5gapidrive5 #MINVER#
  _ZNK6KGAPI25Drive10Permission8selfLinkEv@Base 4.80.0
  _ZNK6KGAPI25Drive10Permission8withLinkEv@Base 4.80.0
  _ZNK6KGAPI25Drive10Permission9photoLinkEv@Base 4.80.0
+ _ZNK6KGAPI25Drive11AppFetchJob10metaObjectEv@Base 5.1.0+git20160302.1303+16.04
  _ZNK6KGAPI25Drive11FileCopyJob10metaObjectEv@Base 4.80.0
  _ZNK6KGAPI25Drive11FileCopyJob5filesEv@Base 4.80.0
  _ZNK6KGAPI25Drive12FileFetchJob10metaObjectEv@Base 4.80.0
@@ -858,6 +862,7 @@ libKF5GAPIDrive.so.5 libkf5gapidrive5 #MINVER#
  _ZNK6KGAPI25Drive8Revision8mimeTypeEv@Base 4.80.0
  _ZNK6KGAPI25Drive8Revision8selfLinkEv@Base 4.80.0
  _ZNK6KGAPI25Drive8Revision9publishedEv@Base 4.80.0
+ (optional=templinst|arch=i386)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Base 5.1.0+git20160302.1303+16.04
  _ZTIN6KGAPI25Drive10PermissionE@Base 4.80.0
  _ZTIN6KGAPI25Drive11AppFetchJobE@Base 4.80.0
  _ZTIN6KGAPI25Drive11FileCopyJobE@Base 4.80.0
