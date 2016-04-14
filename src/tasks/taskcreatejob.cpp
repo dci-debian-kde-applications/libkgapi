@@ -33,7 +33,7 @@
 
 using namespace KGAPI2;
 
-class TaskCreateJob::Private
+class Q_DECL_HIDDEN TaskCreateJob::Private
 {
   public:
     QueueHelper<TaskPtr> tasks;
@@ -90,7 +90,7 @@ void TaskCreateJob::start()
 
     QUrl url = TasksService::createTaskUrl(d->taskListId);
     if (!d->parentId.isEmpty()) {
-        url.addQueryItem(QLatin1String("parent"), d->parentId);
+        url.addQueryItem(QStringLiteral("parent"), d->parentId);
     }
     QNetworkRequest request;
     request.setRawHeader("Authorization", "Bearer " + account()->accessToken().toLatin1());
@@ -99,12 +99,14 @@ void TaskCreateJob::start()
     const QByteArray rawData = TasksService::taskToJSON(task);
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    const auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
 
-    enqueueRequest(request, rawData, QLatin1String("application/json"));
+    enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ObjectsList TaskCreateJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray& rawData)

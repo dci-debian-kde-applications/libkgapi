@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015.
 #
-# Shinjo Park <kde@peremen.name>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-08-23 01:46+0000\n"
-"PO-Revision-Date: 2014-03-03 03:41+0900\n"
+"PO-Revision-Date: 2015-10-17 22:41+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde@peremen.name>\n"
 "Language: ko\n"
@@ -16,223 +16,160 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 1.5\n"
+"X-Qt-Contexts: true\n"
 
 #: src/blogger/blogfetchjob.cpp:102
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::BlogFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/commentapprovejob.cpp:102
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::CommentApproveJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/commentdeletecontentjob.cpp:90
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::CommentDeleteContentJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/commentfetchjob.cpp:199
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::CommentFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/pagecreatejob.cpp:77
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PageCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/pagefetchjob.cpp:134
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PageFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/pagemodifyjob.cpp:77
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PageModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/postcreatejob.cpp:86
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PostCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/postfetchjob.cpp:225
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PostFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/postmodifyjob.cpp:76
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PostModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/postpublishjob.cpp:141
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PostPublishJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/blogger/postsearchjob.cpp:118
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Blogger::PostSearchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/calendar/calendar.cpp:93
-#, fuzzy
-#| msgid "Google Calendar"
 msgctxt "QObject|"
 msgid "Google Calendar"
 msgstr "Google 캘린더"
 
 #: src/calendar/calendarcreatejob.cpp:95
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::CalendarCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/calendar/calendarfetchjob.cpp:118
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::CalendarFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/calendar/calendarmodifyjob.cpp:94
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::CalendarModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/calendar/eventcreatejob.cpp:97
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::EventCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/calendar/eventfetchjob.cpp:216
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::EventFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/calendar/eventmodifyjob.cpp:96
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::EventModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/calendar/eventmovejob.cpp:149
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::EventMoveJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/contacts/contactcreatejob.cpp:149
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::ContactCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/contacts/contactmodifyjob.cpp:154
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::ContactModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/contacts/contactsgroupcreatejob.cpp:105
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::ContactsGroupCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/contacts/contactsgroupfetchjob.cpp:114
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::ContactsGroupFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/contacts/contactsgroupmodifyjob.cpp:107
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::ContactsGroupModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/core/accountinfo/accountinfofetchjob.cpp:73
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::AccountInfoFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/core/authjob.cpp:182
-#, fuzzy
-#| msgid "Failed to parse newly fetched tokens"
 msgctxt "KGAPI2::AuthJob|"
 msgid "Failed to parse newly fetched tokens"
 msgstr "새로 가져온 토큰을 처리할 수 없음"
 
 #: src/core/authjob.cpp:229
-#, fuzzy
-#| msgid "Account name is empty"
 msgctxt "KGAPI2::AuthJob|"
 msgid "Account name is empty"
 msgstr "계정 이름이 비어 있음"
 
 #: src/core/job.cpp:131
-#, fuzzy
-#| msgid "Bad request."
 msgctxt "KGAPI2::Job|"
 msgid "Bad request."
 msgstr "잘못된 요청."
 
 #: src/core/job.cpp:138
-#, fuzzy
-#| msgid "Invalid authentication."
 msgctxt "KGAPI2::Job|"
 msgid "Invalid authentication."
 msgstr "잘못된 인증."
 
 #: src/core/job.cpp:147
-#, fuzzy, qt-format
-#| msgid ""
-#| "Requested resource is forbidden.\n"
-#| "\n"
-#| "Google replied '%1'"
+#, qt-format
 msgctxt "KGAPI2::Job|"
 msgid ""
 "Requested resource is forbidden.\n"
@@ -244,11 +181,7 @@ msgstr ""
 "Google 응답: '%1'"
 
 #: src/core/job.cpp:157
-#, fuzzy, qt-format
-#| msgid ""
-#| "Requested resource does not exist.\n"
-#| "\n"
-#| "Google replied '%1'"
+#, qt-format
 msgctxt "KGAPI2::Job|"
 msgid ""
 "Requested resource does not exist.\n"
@@ -260,11 +193,7 @@ msgstr ""
 "Google 응답: '%1'"
 
 #: src/core/job.cpp:173
-#, fuzzy, qt-format
-#| msgid ""
-#| "Conflict. Remote resource is newer than local.\n"
-#| "\n"
-#| "Google replied '%1'"
+#, qt-format
 msgctxt "KGAPI2::Job|"
 msgid ""
 "Conflict. Remote resource is newer than local.\n"
@@ -276,11 +205,7 @@ msgstr ""
 "Google 응답: '%1'"
 
 #: src/core/job.cpp:183
-#, fuzzy, qt-format
-#| msgid ""
-#| "Requested resource does not exist anymore.\n"
-#| "\n"
-#| "Google replied '%1'"
+#, qt-format
 msgctxt "KGAPI2::Job|"
 msgid ""
 "Requested resource does not exist anymore.\n"
@@ -292,11 +217,7 @@ msgstr ""
 "Google 응답: '%1'"
 
 #: src/core/job.cpp:193
-#, fuzzy, qt-format
-#| msgid ""
-#| "Internal server error. Try again later.\n"
-#| "\n"
-#| "Google replied '%1'"
+#, qt-format
 msgctxt "KGAPI2::Job|"
 msgid ""
 "Internal server error. Try again later.\n"
@@ -308,11 +229,7 @@ msgstr ""
 "Google 응답: '%1'"
 
 #: src/core/job.cpp:211
-#, fuzzy, qt-format
-#| msgid ""
-#| "Maximum quota exceeded. Try again later.\n"
-#| "\n"
-#| "Google replied '%1'"
+#, qt-format
 msgctxt "KGAPI2::Job|"
 msgid ""
 "Maximum quota exceeded. Try again later.\n"
@@ -324,11 +241,7 @@ msgstr ""
 "Google 응답: '%1'"
 
 #: src/core/job.cpp:233
-#, fuzzy, qt-format
-#| msgid ""
-#| "Unknown error.\n"
-#| "\n"
-#| "Google replied '%1'"
+#, qt-format
 msgctxt "KGAPI2::Job|"
 msgid ""
 "Unknown error.\n"
@@ -340,218 +253,156 @@ msgstr ""
 "Google 응답: '%1'"
 
 #: src/core/private/newtokensfetchjob.cpp:128
-#, fuzzy
-#| msgid "Failed to parse server response."
 msgctxt "KGAPI2::NewTokensFetchJob|"
 msgid "Failed to parse server response."
 msgstr "서버 응답을 처리할 수 없습니다."
 
 #: src/core/ui/authwidget.cpp:85
-#, fuzzy
-#| msgid "Invalid account"
 msgctxt "KGAPI2::AuthWidget|"
 msgid "Invalid account"
 msgstr "잘못된 계정"
 
 #: src/core/ui/authwidget.cpp:89
-#, fuzzy
-#| msgid "No scopes to authenticate for"
 msgctxt "KGAPI2::AuthWidget|"
 msgid "No scopes to authenticate for"
 msgstr "다음을 인증할 범위 없음"
 
 #: src/core/ui/authwidget_p.cpp:72
-#, fuzzy
-#| msgid "Authorizing token. This should take just a moment..."
 msgctxt "AuthWidget::Private|"
 msgid "Authorizing token. This should take just a moment..."
 msgstr "토큰 인증 중. 잠시 기다리십시오..."
 
 #: src/core/ui/authwidget_p.cpp:185
-#, fuzzy
-#| msgid "Parsing token page failed."
 msgctxt "AuthWidget::Private|"
 msgid "Parsing token page failed."
 msgstr "토큰 페이지를 처리할 수 없습니다."
 
 #: src/core/ui/authwidget_p.cpp:192
-#, fuzzy
-#| msgid "Failed to obtain token."
 msgctxt "AuthWidget::Private|"
 msgid "Failed to obtain token."
 msgstr "토큰을 가져올 수 없습니다."
 
 #: src/drive/aboutfetchjob.cpp:139
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::AboutFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/appfetchjob.cpp:89
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::AppFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/changefetchjob.cpp:192
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::ChangeFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/childreferencecreatejob.cpp:137
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::ChildReferenceCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/childreferencefetchjob.cpp:116
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::ChildReferenceFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/fileabstractmodifyjob.cpp:128
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::FileAbstractModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/fileabstractuploadjob.cpp:323
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::FileAbstractUploadJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/filecopyjob.cpp:152
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::FileCopyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/filefetchjob.cpp:350
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::FileFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/parentreferencecreatejob.cpp:137
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::ParentReferenceCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/parentreferencefetchjob.cpp:95
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::ParentReferenceFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/permissioncreatejob.cpp:114
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::PermissionCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/permissionfetchjob.cpp:117
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::PermissionFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/permissionmodifyjob.cpp:113
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::PermissionModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/revisionfetchjob.cpp:94
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::RevisionFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/drive/revisionmodifyjob.cpp:111
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::Drive::RevisionModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/latitude/locationcreatejob.cpp:96
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::LocationCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/latitude/locationfetchhistoryjob.cpp:151
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::LocationFetchHistoryJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/latitude/locationfetchjob.cpp:107
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::LocationFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/tasks/taskcreatejob.cpp:117
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::TaskCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/tasks/taskfetchjob.cpp:248
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::TaskFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/tasks/tasklistcreatejob.cpp:94
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::TaskListCreateJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/tasks/tasklistfetchjob.cpp:94
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::TaskListFetchJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/tasks/tasklistmodifyjob.cpp:96
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::TaskListModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"
 
 #: src/tasks/taskmodifyjob.cpp:97
-#, fuzzy
-#| msgid "Invalid response content type"
 msgctxt "KGAPI2::TaskModifyJob|"
 msgid "Invalid response content type"
 msgstr "잘못된 응답 내용 형식"

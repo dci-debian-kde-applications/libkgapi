@@ -33,7 +33,7 @@
 
 using namespace KGAPI2;
 
-class CalendarModifyJob::Private
+class Q_DECL_HIDDEN CalendarModifyJob::Private
 {
   public:
     QueueHelper<CalendarPtr> calendars;
@@ -76,12 +76,14 @@ void CalendarModifyJob::start()
     const QByteArray rawData = CalendarService::calendarToJSON(calendar);
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    const auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
 
-    enqueueRequest(request, rawData, QLatin1String("application/json"));
+    enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ObjectsList CalendarModifyJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray& rawData)

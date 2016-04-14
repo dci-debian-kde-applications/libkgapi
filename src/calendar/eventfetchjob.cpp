@@ -32,7 +32,7 @@
 
 using namespace KGAPI2;
 
-class EventFetchJob::Private
+class Q_DECL_HIDDEN EventFetchJob::Private
 {
   public:
     Private(EventFetchJob *parent);
@@ -67,7 +67,9 @@ QNetworkRequest EventFetchJob::Private::createRequest(const QUrl& url)
     request.setUrl(url);
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
@@ -175,18 +177,18 @@ void EventFetchJob::start()
     QUrl url;
     if (d->eventId.isEmpty()) {
         url = CalendarService::fetchEventsUrl(d->calendarId);
-        url.addQueryItem(QLatin1String("showDeleted"), Utils::bool2Str(d->fetchDeleted));
+        url.addQueryItem(QStringLiteral("showDeleted"), Utils::bool2Str(d->fetchDeleted));
         if (!d->filter.isEmpty()) {
-            url.addQueryItem(QLatin1String("q"), d->filter);
+            url.addQueryItem(QStringLiteral("q"), d->filter);
         }
         if (d->updatedTimestamp > 0) {
-            url.addQueryItem(QLatin1String("updatedMin"), Utils::ts2Str(d->updatedTimestamp));
+            url.addQueryItem(QStringLiteral("updatedMin"), Utils::ts2Str(d->updatedTimestamp));
         }
         if (d->timeMin > 0) {
-            url.addQueryItem(QLatin1String("timeMin"), Utils::ts2Str(d->timeMin));
+            url.addQueryItem(QStringLiteral("timeMin"), Utils::ts2Str(d->timeMin));
         }
         if (d->timeMax > 0) {
-            url.addQueryItem(QLatin1String("timeMax"), Utils::ts2Str(d->timeMax));
+            url.addQueryItem(QStringLiteral("timeMax"), Utils::ts2Str(d->timeMax));
         }
     } else {
         url = CalendarService::fetchEventUrl(d->calendarId, d->eventId);

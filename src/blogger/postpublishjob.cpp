@@ -30,7 +30,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Blogger;
 
-class PostPublishJob::Private
+class Q_DECL_HIDDEN PostPublishJob::Private
 {
   public:
     Private(const QString &blogId,
@@ -112,7 +112,7 @@ void PostPublishJob::start()
     if (d->action == Blogger::PostPublishJob::Publish) {
         url = BloggerService::publishPostUrl(d->blogId, d->postId);
         if (d->publishDate.isValid()) {
-            url.addQueryItem(QLatin1String("publishDate"), d->publishDate.toString(Qt::ISODate));
+            url.addQueryItem(QStringLiteral("publishDate"), d->publishDate.toString(Qt::ISODate));
         }
     } else {
         url = BloggerService::revertPostUrl(d->blogId, d->postId);

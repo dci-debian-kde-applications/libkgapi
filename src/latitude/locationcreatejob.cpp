@@ -32,7 +32,7 @@
 
 using namespace KGAPI2;
 
-class LocationCreateJob::Private
+class Q_DECL_HIDDEN LocationCreateJob::Private
 {
   public:
     Private();
@@ -76,12 +76,14 @@ void LocationCreateJob::start()
     const QByteArray rawData = LatitudeService::locationToJSON(d->location);
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    const auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
 
-    enqueueRequest(request, rawData, QLatin1String("application/json"));
+    enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ObjectsList LocationCreateJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray& rawData)

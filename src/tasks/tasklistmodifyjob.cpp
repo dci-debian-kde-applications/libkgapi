@@ -34,7 +34,7 @@
 
 using namespace KGAPI2;
 
-class TaskListModifyJob::Private
+class Q_DECL_HIDDEN TaskListModifyJob::Private
 {
   public:
     QueueHelper<TaskListPtr> taskLists;
@@ -78,12 +78,14 @@ void TaskListModifyJob::start()
     const QByteArray rawData = TasksService::taskListToJSON(taskList);
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    const auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
 
-    enqueueRequest(request, rawData, QLatin1String("application/json"));
+    enqueueRequest(request, rawData, QStringLiteral("application/json"));
 }
 
 ObjectsList TaskListModifyJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray& rawData)

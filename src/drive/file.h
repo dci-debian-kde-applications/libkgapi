@@ -47,10 +47,10 @@ namespace Drive
  */
 class KGAPIDRIVE_EXPORT File: public KGAPI2::Object
 {
-
-  public:
+  private:
     class Private;
 
+  public:
     /**
      * @brief DriveFile::Labels holds the structure used for labels property.
      */
@@ -581,6 +581,9 @@ class KGAPIDRIVE_EXPORT File: public KGAPI2::Object
 private:
     Private * const d;
     friend class Private;
+    friend class Change::Private;
+    friend class ParentReference;
+    friend class Permission;
 };
 
 } /* namespace Drive */

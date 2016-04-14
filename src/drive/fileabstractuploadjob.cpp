@@ -38,7 +38,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Drive;
 
-class FileAbstractUploadJob::Private
+class Q_DECL_HIDDEN FileAbstractUploadJob::Private
 {
   public:
     Private(FileAbstractUploadJob *parent);
@@ -130,7 +130,7 @@ void FileAbstractUploadJob::Private::processNext()
         return;
     }
 
-    const QString filePath = files.keys().first();
+    const QString filePath = files.cbegin().key();
     if (!filePath.startsWith(QLatin1String("?=")) && !QFile::exists(filePath)) {
         qCWarning(KGAPIDebug) << filePath << "is not a valid file path";
         processNext();
@@ -147,16 +147,16 @@ void FileAbstractUploadJob::Private::processNext()
     }
 
     q->updateUrl(url);
-    url.addQueryItem(QLatin1String("useContentAsIndexableText"), Utils::bool2Str(useContentAsIndexableText));
+    url.addQueryItem(QStringLiteral("useContentAsIndexableText"), Utils::bool2Str(useContentAsIndexableText));
 
     QNetworkRequest request;
     QByteArray rawData;
     QString contentType;
 
     // just to be sure
-    url.removeQueryItem(QLatin1String("uploadType"));
+    url.removeQueryItem(QStringLiteral("uploadType"));
     if (metaData.isNull()) {
-        url.addQueryItem(QLatin1String("uploadType"), QLatin1String("media"));
+        url.addQueryItem(QStringLiteral("uploadType"), QStringLiteral("media"));
 
         rawData = readFile(filePath, contentType);
         if (rawData.isEmpty()) {
@@ -165,19 +165,19 @@ void FileAbstractUploadJob::Private::processNext()
         }
 
     } else if (!filePath.startsWith(QLatin1String("?="))) {
-        url.addQueryItem(QLatin1String("uploadType"), QLatin1String("multipart"));
+        url.addQueryItem(QStringLiteral("uploadType"), QStringLiteral("multipart"));
 
         QString boundary;
         rawData = buildMultipart(filePath, metaData, boundary);
 
-        contentType = QString::fromLatin1("multipart/related; boundary=%1").arg(boundary);
+        contentType = QStringLiteral("multipart/related; boundary=%1").arg(boundary);
         if (rawData.isEmpty()) {
             processNext();
             return;
         }
     } else {
         rawData = File::toJSON(metaData);
-        contentType = QLatin1String("application/json");
+        contentType = QStringLiteral("application/json");
     }
 
     request.setUrl(url);
@@ -207,7 +207,7 @@ FileAbstractUploadJob::FileAbstractUploadJob(const FilePtr &metadata,
     FileAbstractDataJob(account, parent),
     d(new Private(this))
 {
-    d->files.insert(QLatin1String("?=0"), metadata);
+    d->files.insert(QStringLiteral("?=0"), metadata);
     d->originalFilesCount = 1;
 }
 
@@ -219,7 +219,7 @@ FileAbstractUploadJob::FileAbstractUploadJob(const FilesList &metadata,
 {
     int i = 0;
     Q_FOREACH (const FilePtr &file, metadata) {
-        d->files.insert(QString::fromLatin1("?=%1").arg(i), file);
+        d->files.insert(QStringLiteral("?=%1").arg(i), file);
         ++i;
     }
     d->originalFilesCount = d->files.count();

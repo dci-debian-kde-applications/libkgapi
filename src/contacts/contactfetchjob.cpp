@@ -32,7 +32,7 @@
 
 using namespace KGAPI2;
 
-class ContactFetchJob::Private
+class Q_DECL_HIDDEN ContactFetchJob::Private
 {
   public:
     Private(ContactFetchJob *parent);
@@ -63,7 +63,9 @@ QNetworkRequest ContactFetchJob::Private::createRequest(const QUrl& url)
     request.setUrl(url);
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
@@ -140,10 +142,10 @@ void ContactFetchJob::start()
     if (d->contactId.isEmpty()) {
         url = ContactsService::fetchAllContactsUrl(account()->accountName(), d->fetchDeleted);
         if (d->timestamp > 0) {
-            url.addQueryItem(QLatin1String("updated-min"), Utils::ts2Str(d->timestamp));
+            url.addQueryItem(QStringLiteral("updated-min"), Utils::ts2Str(d->timestamp));
         }
         if (!d->filter.isEmpty()) {
-            url.addQueryItem(QLatin1String("q"), d->filter);
+            url.addQueryItem(QStringLiteral("q"), d->filter);
         }
     } else {
         url = ContactsService::fetchContactUrl(account()->accountName(), d->contactId);

@@ -33,7 +33,7 @@
 
 using namespace KGAPI2;
 
-class ContactsGroupCreateJob::Private
+class Q_DECL_HIDDEN ContactsGroupCreateJob::Private
 {
   public:
     QueueHelper<ContactsGroupPtr> groups;
@@ -81,12 +81,14 @@ void ContactsGroupCreateJob::start()
     rawData.append("</atom:entry>");
 
     QStringList headers;
-    Q_FOREACH(const QByteArray &str, request.rawHeaderList()) {
+    auto rawHeaderList = request.rawHeaderList();
+    headers.reserve(rawHeaderList.size());
+    Q_FOREACH(const QByteArray &str, rawHeaderList) {
         headers << QLatin1String(str) + QLatin1String(": ") + QLatin1String(request.rawHeader(str));
     }
     qCDebug(KGAPIRaw) << headers;
 
-    enqueueRequest(request, rawData, QLatin1String("application/atom+xml"));
+    enqueueRequest(request, rawData, QStringLiteral("application/atom+xml"));
 }
 
 ObjectsList ContactsGroupCreateJob::handleReplyWithItems(const QNetworkReply *reply, const QByteArray& rawData)

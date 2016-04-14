@@ -24,7 +24,7 @@
 using namespace KGAPI2;
 using namespace KGAPI2::Blogger;
 
-class Post::Private
+class Q_DECL_HIDDEN Post::Private
 {
   public:
     Private();
@@ -256,7 +256,9 @@ PostPtr Post::Private::fromJSON(const QVariant &json)
     post->d->location = location[QStringLiteral("name")].toString();
     post->d->latitude = location[QStringLiteral("lat")].toDouble();
     post->d->longitude = location[QStringLiteral("lng")].toDouble();
-    Q_FOREACH (const QVariant &url, map[QLatin1String("images")].toList()) {
+
+    const QVariantList variantList = map[QStringLiteral("images")].toList();
+    Q_FOREACH (const QVariant &url, variantList) {
         post->d->images << url.toMap()[QStringLiteral("url")].toUrl();
     }
     post->d->status = map[QStringLiteral("status")].toString();
@@ -321,7 +323,7 @@ PostPtr Post::fromJSON(const QByteArray &rawData)
 
     const QVariant json = document.toVariant();
     const QVariantMap map = json.toMap();
-    if (map[QLatin1String("kind")].toString() != QLatin1String("blogger#post")) {
+    if (map[QStringLiteral("kind")].toString() != QLatin1String("blogger#post")) {
         return PostPtr();
     }
 
@@ -337,18 +339,20 @@ ObjectsList Post::fromJSONFeed(const QByteArray &rawData, FeedData &feedData)
 
     const QVariant json = document.toVariant();
     const QVariantMap map = json.toMap();
-    if (map[QLatin1String("kind")].toString() != QLatin1String("blogger#postList")) {
+    if (map[QStringLiteral("kind")].toString() != QLatin1String("blogger#postList")) {
         return ObjectsList();
     }
 
-    if (!map[QLatin1String("nextPageToken")].toString().isEmpty()) {
+    if (!map[QStringLiteral("nextPageToken")].toString().isEmpty()) {
         QUrl requestUrl(feedData.requestUrl);
-        requestUrl.removeQueryItem(QLatin1String("pageToken"));
-        requestUrl.addQueryItem(QLatin1String("pageToken"), map[QLatin1String("nextPageToken")].toString());
+        requestUrl.removeQueryItem(QStringLiteral("pageToken"));
+        requestUrl.addQueryItem(QStringLiteral("pageToken"), map[QStringLiteral("nextPageToken")].toString());
         feedData.nextPageUrl = requestUrl;
     }
     ObjectsList list;
-    Q_FOREACH (const QVariant &item, map[QLatin1String("items")].toList()) {
+    const QVariantList variantList = map[QStringLiteral("items")].toList();
+    list.reserve(variantList.size());
+    Q_FOREACH (const QVariant &item, variantList) {
         list << Private::fromJSON(item);
     }
     return list;
