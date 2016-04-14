@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.1.0 amd64
+# SymbolsHelper-Confirmed: 5.1.0 amd64 armhf i386 kfreebsd-i386
 libKF5GAPIDrive.so.5 libkf5gapidrive5 #MINVER#
  _ZN6KGAPI212DriveService11copyFileUrlERK7QString@Base 4.80.0
  _ZN6KGAPI212DriveService11fetchAppUrlERK7QString@Base 4.80.0
@@ -858,6 +858,7 @@ libKF5GAPIDrive.so.5 libkf5gapidrive5 #MINVER#
  _ZNK6KGAPI25Drive8Revision8mimeTypeEv@Base 4.80.0
  _ZNK6KGAPI25Drive8Revision8selfLinkEv@Base 4.80.0
  _ZNK6KGAPI25Drive8Revision9publishedEv@Base 4.80.0
+ (optional=templinst|arch=!amd64)_ZSt4swapIN8QVariant7PrivateEEvRT_S3_@Base 5.1.0
  _ZTIN6KGAPI25Drive10PermissionE@Base 4.80.0
  _ZTIN6KGAPI25Drive11AppFetchJobE@Base 4.80.0
  _ZTIN6KGAPI25Drive11FileCopyJobE@Base 4.80.0
