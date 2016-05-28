@@ -1,12 +1,11 @@
-libkgapi (5.1.0-2~2.gbpbce1ea) UNRELEASED; urgency=medium
+libkgapi (5.1.0-2) unstable; urgency=medium
 
-  ** SNAPSHOT build @bce1ea1243eafa159e25044365c23dfb41cb0693 **
-
+  [ Automatic packaging ]
   * Bump Standards-Version to 3.9.8
   * Update symbols files from buildds logs (5.1.0-1).
   * Migrate dbg package to automatic dbgsym
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Sat, 28 May 2016 14:33:22 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 28 May 2016 19:54:36 +0200
 
 libkgapi (5.1.0-1) experimental; urgency=medium
 
