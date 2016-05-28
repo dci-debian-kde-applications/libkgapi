@@ -3,7 +3,7 @@
 include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 
 override_dh_strip:
-	$(overridden_command) --dbg-package=libkf5gapi-dbg
+	$(overridden_command) --dbgsym-migration='libkf5gapi-dbg (<= 5.1.0-2~1.gbp16a3a9~)'
 
 override_dh_auto_test:
 	# Disable auto test at build time, fakeroot breaks them

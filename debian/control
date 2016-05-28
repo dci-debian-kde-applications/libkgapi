@@ -127,16 +127,3 @@ Depends: libkf5gapi-data (= ${source:Version}),
          ${shlibs:Depends}
 Description: library to integrate with Google Tasks service API
  This package is part of libkgapi.
-
-Package: libkf5gapi-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Multi-Arch: same
-Depends: libkf5gapiblogger5 (= ${binary:Version}) | libkf5gapimaps5 (= ${binary:Version}) | libkf5gapicalendar5 (= ${binary:Version}) | libkf5gapicontacts5 (= ${binary:Version}) | libkf5gapicore5 (= ${binary:Version}) | libkf5gapidrive5 (= ${binary:Version}) | libkf5gapilatitude5 (= ${binary:Version}) | libkf5gapimaps5 (= ${binary:Version}) | libkf5gapitasks5 (= ${binary:Version}),
-         ${misc:Depends}
-Description: Google API library for KDE -- debugging symbols
- LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
- for various Google services.
- .
- This package contains the debugging symbols for the LibKGAPI library.
