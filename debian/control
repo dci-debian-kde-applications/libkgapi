@@ -63,6 +63,7 @@ Package: libkf5gapi-data
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Section: oldlibs
+Priority: extra
 Description: Google API library for KDE -- transitional
  LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
  for various Google services.
