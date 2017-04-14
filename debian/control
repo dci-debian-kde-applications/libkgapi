@@ -103,6 +103,8 @@ Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
 Description: core library to integrate with Google service APIs
  This package is part of libkgapi.
 
