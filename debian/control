@@ -61,7 +61,7 @@ Description: Google API library for KDE -- data files
 
 Package: libkf5gapi-data
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: libkpimgapi-data, ${misc:Depends}, ${shlibs:Depends}
 Section: oldlibs
 Priority: extra
 Description: Google API library for KDE -- transitional
