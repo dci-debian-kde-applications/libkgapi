@@ -6,21 +6,44 @@ Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                extra-cmake-modules (>= 5.12.0~),
-               libkf5kio-dev (>= 5.12.0~),
                libkf5calendarcore-dev (>= 4.81.0~),
                libkf5contacts-dev (>= 4.91.0~),
                libkf5coreaddons-dev (>= 5.12.0~),
+               libkf5kio-dev (>= 5.12.0~),
                libkf5windowsystem-dev (>= 5.12.0~),
                libqt5webengine5-dev,
                libqt5webkit5-dev (>= 5.2.0~),
                pkg-kde-tools (>= 0.5.0),
                qtbase5-dev (>= 5.2.0~),
                qttools5-dev,
-               qttools5-dev-tools
+               qttools5-dev-tools,
 Standards-Version: 4.1.0
 Homepage: https://projects.kde.org/libkgapi
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/applications/libkgapi.git
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/applications/libkgapi.git
+
+Package: libkf5gapi-data
+Architecture: any
+Depends: libkpimgapi-data, ${misc:Depends}, ${shlibs:Depends}
+Section: oldlibs
+Priority: extra
+Description: Google API library for KDE -- transitional
+ LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
+ for various Google services.
+ .
+ This is a transitional package which can be safely removed.
+
+Package: libkpimgapi-data
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: libkf5gapi-data (<< 16.12)
+Breaks: libkf5gapi-data (<< 16.12)
+Description: Google API library for KDE -- data files
+ LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
+ for various Google services.
+ .
+ This package contains data files.
 
 Package: libkpimgapi-dev
 Section: libdevel
@@ -38,7 +61,7 @@ Depends: libkf5calendarcore-dev (>= 4.81.0~),
          libkpimgapimaps5 (= ${binary:Version}),
          libkpimgapitasks5 (= ${binary:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: Google API library for KDE -- development files
  LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
  for various Google services.
@@ -46,35 +69,12 @@ Description: Google API library for KDE -- development files
  This package contains development files for building software that uses
  the LibKGAPI library.
 
-Package: libkpimgapi-data
-Architecture: all
-Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Conflicts: libkf5gapi-data (<< 16.12)
-Breaks: libkf5gapi-data (<< 16.12)
-Description: Google API library for KDE -- data files
- LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
- for various Google services.
- .
- This package contains data files.
-
-Package: libkf5gapi-data
-Architecture: any
-Depends: libkpimgapi-data, ${misc:Depends}, ${shlibs:Depends}
-Section: oldlibs
-Priority: extra
-Description: Google API library for KDE -- transitional
- LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
- for various Google services.
- .
- This is a transitional package which can be safely removed.
-
 Package: libkpimgapiblogger5
 Architecture: any
 Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: library to integrate with Google Blogger service API
  This package is part of libkgapi.
 
@@ -83,7 +83,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: library to integrate with Google Calendar service API
  This package is part of libkgapi.
 
@@ -92,7 +92,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: library to integrate with Google Contacts service API
  This package is part of libkgapi.
 
@@ -102,7 +102,7 @@ Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          libqt5webengine5,
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Breaks: ${kde-l10n:all}
 Replaces: ${kde-l10n:all}
 Description: core library to integrate with Google service APIs
@@ -113,7 +113,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: library to integrate with Google Drive service API
  This package is part of libkgapi.
 
@@ -122,7 +122,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: library to integrate with Google Latitude service API
  This package is part of libkgapi.
 
@@ -131,7 +131,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: library to integrate with Google Maps service API
  This package is part of libkgapi.
 
@@ -140,6 +140,6 @@ Architecture: any
 Multi-Arch: same
 Depends: libkpimgapi-data (= ${source:Version}),
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Description: library to integrate with Google Tasks service API
  This package is part of libkgapi.
