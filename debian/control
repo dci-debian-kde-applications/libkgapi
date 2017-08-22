@@ -6,7 +6,7 @@ Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
                extra-cmake-modules (>= 5.12.0~),
-               kio-dev (>= 5.12.0~),
+               libkf5kio-dev (>= 5.12.0~),
                libkf5calendarcore-dev (>= 4.81.0~),
                libkf5contacts-dev (>= 4.91.0~),
                libkf5coreaddons-dev (>= 5.12.0~),
