@@ -39,6 +39,7 @@ Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Conflicts: libkf5gapi-data (<< 16.12)
 Breaks: libkf5gapi-data (<< 16.12)
+Replaces: libkf5gapi-data (<< 16.12)
 Description: Google API library for KDE -- data files
  LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
  for various Google services.
@@ -62,6 +63,8 @@ Depends: libkf5calendarcore-dev (>= 4:5.6.0~),
          libkpimgapitasks5 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
+Breaks: libkf5gapi-dev (<< 16.12)
+Replaces: libkf5gapi-dev (<< 16.12)
 Description: Google API library for KDE -- development files
  LibKGAPI (previously called LibKGoogle) is a C++ library that implements APIs
  for various Google services.
