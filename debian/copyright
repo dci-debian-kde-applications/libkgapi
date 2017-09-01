@@ -5,68 +5,12 @@ Source: http://download.kde.org/stable/libkgapi
 Files: *
 Copyright: 2012, Andrius da Costa Ribas <andriusmao@gmail.com>
            2012-2013, Dan Vratil <dan@progdan.cz>
-           2012-2014, Daniel Vrátil <dvratil@redhat.com>
-           1989-1991, Free Software Foundation, Inc
+           2012-2015, Daniel Vrátil <dvratil@redhat.com>
            2012, Jan Grulich <grulja@gmail.com>
            2012, Jan Grulich <jgrulich@redhat.com>
+           2011-2017, This_file_is_part_of_KDE
            2011-2015, This_file_is_part_of_KDE
-License: GPL-2+
-
-Files: src/blogger/blog.cpp
-       src/blogger/blog.h
-       src/blogger/blogfetchjob.cpp
-       src/blogger/blogfetchjob.h
-       src/blogger/bloggerservice.cpp
-       src/blogger/bloggerservice.h
-       src/blogger/comment.cpp
-       src/blogger/comment.h
-       src/blogger/commentapprovejob.cpp
-       src/blogger/commentapprovejob.h
-       src/blogger/commentdeletecontentjob.cpp
-       src/blogger/commentdeletecontentjob.h
-       src/blogger/commentdeletejob.cpp
-       src/blogger/commentdeletejob.h
-       src/blogger/commentfetchjob.cpp
-       src/blogger/commentfetchjob.h
-       src/blogger/page.cpp
-       src/blogger/page.h
-       src/blogger/pagecreatejob.cpp
-       src/blogger/pagecreatejob.h
-       src/blogger/pagedeletejob.cpp
-       src/blogger/pagedeletejob.h
-       src/blogger/pagefetchjob.cpp
-       src/blogger/pagefetchjob.h
-       src/blogger/pagemodifyjob.cpp
-       src/blogger/pagemodifyjob.h
-       src/blogger/post.cpp
-       src/blogger/post.h
-       src/blogger/postcreatejob.cpp
-       src/blogger/postcreatejob.h
-       src/blogger/postdeletejob.cpp
-       src/blogger/postdeletejob.h
-       src/blogger/postfetchjob.cpp
-       src/blogger/postfetchjob.h
-       src/blogger/postmodifyjob.cpp
-       src/blogger/postmodifyjob.h
-       src/blogger/postpublishjob.cpp
-       src/blogger/postpublishjob.h
-       src/blogger/postsearchjob.cpp
-       src/blogger/postsearchjob.h
-Copyright: 2014, Daniel Vrátil <dvratil@redhat.com>
-License: LGPL-2.1+
-
-Files: po/ca/libkgapi_qt.po
-       po/ca@valencia/libkgapi_qt.po
-       po/uk/libkgapi_qt.po
-Copyright: 2011-2015, This_file_is_part_of_KDE
 License: LGPL-2.1+3+KDEeV
- This file is distributed under the license LGPL version 2.1 or
- version 3 or later versions approved by the membership of KDE e.V.
- .
- On Debian systems, the complete text of the GNU Lesser General Public License
- version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1', likewise,
- the complete text of the GNU Lesser General Public License version 3 can be
- found in `/usr/share/common-licenses/LGPL-3'.
 
 Files: debian/*
 Copyright: 2012 Jonathan Thomas <echidnaman@kubuntu.org>
@@ -91,20 +35,21 @@ License: GPL-2+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-License: LGPL-2.1+
+License: LGPL-2.1+3+KDEeV
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
  License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
+ version 2.1 of the License, or (at your option) version 3, or any
+ later version accepted by the membership of KDE e.V. (or its
+ successor approved by the membership of KDE e.V.), which shall
+ act as a proxy defined in Section 6 of version 3 of the license.
  .
  This library is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
- .
- You should have received a copy of the GNU Lesser General Public
- License along with this library; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
  --
- On Debian systems, the complete text of the GNU Lesser General Public License
- version 2.1 can be found in `/usr/share/common-licenses/LGPL-2.1'.
+ The complete text of the GNU Lesser General Public License version 2.1
+ can be found in `/usr/share/common-licenses/LGPL-2.1', likewise,
+ the complete text of the GNU Lesser General Public License version 3
+ can be found in `/usr/share/common-licenses/LGPL-3'.
