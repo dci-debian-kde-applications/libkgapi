@@ -1,10 +1,10 @@
 usr/include/KPim/KGAPI/
 usr/include/KPim/kgapi_version.h
-usr/lib/*/cmake/KF5GAPI/KF5GAPIConfig.cmake
-usr/lib/*/cmake/KF5GAPI/KF5GAPIConfigVersion.cmake
-usr/lib/*/cmake/KF5GAPI/KPimGAPITargets-debian.cmake
-usr/lib/*/cmake/KF5GAPI/KPimGAPITargets.cmake
 usr/lib/*/cmake/KPimGAPI/
+usr/lib/*/cmake/KPimGAPI/KPimGAPIConfig.cmake
+usr/lib/*/cmake/KPimGAPI/KPimGAPIConfigVersion.cmake
+usr/lib/*/cmake/KPimGAPI/KPimGAPITargets-debian.cmake
+usr/lib/*/cmake/KPimGAPI/KPimGAPITargets.cmake
 usr/lib/*/libKPimGAPIBlogger.so
 usr/lib/*/libKPimGAPICalendar.so
 usr/lib/*/libKPimGAPIContacts.so
