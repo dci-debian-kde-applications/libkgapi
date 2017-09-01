@@ -1,8 +1,15 @@
-libkgapi (17.08.0-1~) UNRELEASED; urgency=medium
+libkgapi (17.08.0-1) experimental; urgency=medium
 
   * New upstream release (17.08.0)
+  * Bump Standards-Version to 4.1.0.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Add missing breaks/replaces
+  * Bump libkf5itemmodels-dev build dep version
+  * Update copyright file
+  * Release to experimental
 
- -- Maximiliano Curia <maxy@debian.org>  Tue, 22 Aug 2017 23:30:25 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 01 Sep 2017 22:08:39 +0200
 
 libkgapi (17.08.0-0neon) xenial; urgency=medium
 
