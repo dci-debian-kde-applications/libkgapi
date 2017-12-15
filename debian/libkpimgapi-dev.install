@@ -1,6 +1,6 @@
 usr/include/KPim/KGAPI/
 usr/include/KPim/kgapi_version.h
-usr/lib/*/cmake/KF5GAPI/*
+usr/lib/*/cmake/KPimGAPI/*
 usr/lib/*/libKPimGAPIBlogger.so
 usr/lib/*/libKPimGAPICalendar.so
 usr/lib/*/libKPimGAPIContacts.so
