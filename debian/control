@@ -50,7 +50,7 @@ Description: Google API library for KDE -- data files
 Package: libkpimgapi-dev
 Section: libdevel
 Architecture: any
-Multi-Arch: foreign
+Multi-Arch: same
 Depends: libkf5calendarcore-dev (>= 4:17.08~),
          libkf5contacts-dev (>= 4:17.08~),
          libkf5coreaddons-dev (>= 5.12.0~),
