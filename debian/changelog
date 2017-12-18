@@ -5,6 +5,7 @@ libkgapi (17.08.3-1) UNRELEASED; urgency=medium
   * Bump Standards-Version to 4.1.2 (No changes needed).
   * Mark libkf5gapi-dev correctly as Multi-Arch: same
   * Remove not needed Build-Deps.
+  * Bump debhelper build-dep and compat to 10.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 15 Dec 2017 19:18:06 +0100
 
