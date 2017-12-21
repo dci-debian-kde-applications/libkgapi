@@ -1,4 +1,6 @@
-libkgapi (17.08.3-1) UNRELEASED; urgency=medium
+libkgapi (17.08.3-1) unstable; urgency=medium
+
+  * Team upload.
 
   [ Sandro Knauß ]
   * New upstream release (17.08.3).
@@ -8,7 +10,7 @@ libkgapi (17.08.3-1) UNRELEASED; urgency=medium
   * Bump debhelper build-dep and compat to 10.
   * Set l10npkgs_firstversion_ok to 4:16.04.3-9~
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 15 Dec 2017 19:18:06 +0100
+ -- Sandro Knauß <hefee@debian.org>  Thu, 21 Dec 2017 18:01:12 +0100
 
 libkgapi (17.08.0-1) experimental; urgency=medium
 
