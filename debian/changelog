@@ -1,9 +1,3 @@
-libkgapi (17.12.1-0neon) xenial; urgency=medium
-
-  * New release
-
- -- Neon CI <neon@kde.org>  Wed, 10 Jan 2018 18:41:14 +0000
-
 libkgapi (17.12.0-0neon) xenial; urgency=medium
 
   * New release
